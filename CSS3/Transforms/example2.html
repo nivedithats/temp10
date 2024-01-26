@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 100vh;
+            background-color: #0c0c0c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card1{
+          border-radius: 10px;
+          /*overflow: hidden;*/
+          border: 2px solid #fff;
+          padding: 10px;
+
+        }
+        .card2{
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(35deg,#b415e0,#400ac0);
+            border-radius: 10px;
+            padding: 10px;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .card2 p{
+            text-align: justify;
+        }
+        .card1:hover{
+            transform: scale(1.5);
+            transition: 1s;
+        }
+        .card1:hover .card2{
+            transform: rotate(360deg);
+            transition: 5s;
+            transform-origin: left;
+        }
+
+        .face{
+            width: 300px;
+            height: 300px;
+            border-radius: 200px;
+            background-color: #fff;
+            border: 10px groove teal;
+            position: relative;
+        }
+        .seconds{
+            position: absolute;
+            width: 45%;
+            height: 3px;
+            background-color: #0c0c0c;
+            top: 50%;
+            left: 50%;
+            transform-origin: left;
+        }
+        .face::before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 600px;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .face:hover{
+            transform: rotate(360deg);
+            transition: 60s;
+            transition-timing-function: steps(60,jump-start);
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+         <!-- <div class="card1">
+            <div class="card2">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At accusantium doloremque modi obcaecati autdelectus sapiente odio, </p>
+            </div> -->
+       
+            
+        <div class="face">
+            <span class="seconds"></span>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
